@@ -114,12 +114,25 @@ console.log(getGrades(90)) //Output : Add
 //------------------------------------------------------------------
 
 //check Vowels in the given string 
-checkVowel = (str) => {
-  return(str.includes('e') || str.inlcudes('a'))
+
+  const arr = ['a','e','i','o','u']
+  checkVowel = (str, vowel) => {
+    var value = 0;
+    vowel.forEach(function(word){
+      value = value + str.includes(word);
+    });
+    return (value === 1)
 }
 
-const str = 'Hello'
-console.log(checkVowel(str))
+console.log(checkVowel('f',arr)) //false
+console.log(checkVowel('o',arr)) //true
+
+//------------------------------------------------------------------
+
+
+//check if a number is prime 
+
+
 
 
 
